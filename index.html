@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 요구사항 1: <title> 태그에 '인사교류' 및 '채용제도' 문구 포함 -->
+    <title>행정안전부 보도자료 - 인사교류 및 채용제도 개선 방안</title>
+    <style>
+        /* 기본 스타일 초기화 및 폰트 설정 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f4f6f9;
+            padding: 20px 10px;
+        }
+
+        /* 메인 컨테이너 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* 상단 헤더 (보도자료 헤더) */
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 30px 25px;
+            border-bottom: 4px solid #0056b3;
+        }
+        .category-tag {
+            display: inline-block;
+            background-color: #e6f0fa;
+            color: #003366;
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        /* 요구사항 2: 페이지 상단 H1 제목 */
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            word-break: keep-all;
+            line-height: 1.4;
+        }
+        .meta-info {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #d0e1f9;
+        }
+
+        /* 본문 영역 */
+        main {
+            padding: 30px 25px;
+        }
+
+        /* 섹션 공통 스타일 */
+        /* 요구사항 3: 2개 섹션 구분 */
+        .section-box {
+            margin-bottom: 35px;
+            background-color: #fafbfc;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            padding: 20px 25px;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            color: #003366;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #003366;
+            display: flex;
+            align-items: center;
+        }
+        .section-title span {
+            background-color: #003366;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+
+        /* 요구사항 4: 주요내용 목록 (ul, ol) */
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .content-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #444444;
+        }
+        .content-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .sub-list {
+            margin-top: 8px;
+            padding-left: 15px;
+            list-style-type: decimal;
+            color: #666666;
+            font-size: 0.95rem;
+        }
+        .sub-list li {
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+        .sub-list li::before {
+            content: none;
+        }
+
+        /* 요구사항 5: 윤호중 장관 인용구 (blockquote) */
+        .quote-box {
+            background-color: #f0f7ff;
+            border-left: 5px solid #0056b3;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        blockquote {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1a2530;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            word-break: keep-all;
+        }
+        .quote-author {
+            font-size: 0.9rem;
+            color: #555555;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* 하단 푸터 */
+        footer {
+            background-color: #f1f3f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666666;
+            border-top: 1px solid #e9ecef;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+            .section-title {
+                font-size: 1.15rem;
+            }
+            main {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 상단 보도자료 헤더 -->
+        <header>
+            <span class="category-tag">보도자료</span>
+            <!-- 요구사항 2: H1 제목 -->
+            <h1>공직사회 활력 제고를 위한 인사교류 및 채용제도 개편 추진</h1>
+            <div class="meta-info">
+                <span>담당부서: 행정안전부 청렴담당부서</span> | 
+                <span>배포일시: 2026. 09. 29.</span>
+            </div>
+        </header>
+
+        <!-- 메인 콘텐츠 -->
+        <main>
+            <!-- 요구사항 3: 1번 섹션 - 인사 인센티브 -->
+            <section class="section-box">
+                <h2 class="section-title"><span>1</span>인사인센티브 확대 방안</h2>
+                <!-- 요구사항 4: 주요내용 목록 -->
+                <ul class="content-list">
+                    <li>
+                        <strong>중앙-지방 간 인사교류자에 대한 혜택 대폭 강화</strong>
+                        <ol class="sub-list">
+                            <li>교류 근무자에 대한 인사가점 및 성과급 우대 적용</li>
+                            <li>지방 근무 시 주거지원비 및 이사비용 지원 확대</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>청렴 및 적극행정 우수 공무원 특별승진 기회 확대</strong>
+                        <ul class="sub-list" style="list-style-type: disc;">
+                            <li>성과 중심의 공평하고 투명한 보상체계 구축</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 요구사항 5: 장관 인용구 -->
+            <div class="quote-box">
+                <blockquote>
+                    "이번 인사교류 확대와 채용제도 개선은 유능한 인재들이 소신 있게 일할 수 있는 공직 환경을 조성하기 위함입니다. 국민이 체감할 수 있는 청렴하고 혁신적인 공공서비스를 제공하도록 지속적으로 제도를 보완해 나가겠습니다."
+                </blockquote>
+                <p class="quote-author">- 행정안전부 윤호중 장관 -</p>
+            </div>
+
+            <!-- 요구사항 3: 2번 섹션 - 채용제도 개선 -->
+            <section class="section-box">
+                <h2 class="section-title"><span>2</span>채용제도 개선 주요내용</h2>
+                <!-- 요구사항 4: 주요내용 목록 -->
+                <ul class="content-list">
+                    <li>
+                        <strong>공정하고 투명한 채용 프로세스 강화</strong>
+                        <ol class="sub-list">
+                            <li>블라인드 면접 도입 확대 및 외부 면접위원 비율 상향</li>
+                            <li>채용 비리 예방을 위한 단계별 청렴 검증 시스템 도입</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>청년 인재 진입 장벽 완화 및 인재 다양성 확보</strong>
+                        <ol class="sub-list">
+                            <li>직무 중심의 평가 항목 개편으로 실무 역량 검증 강화</li>
+                            <li>지방 인재 및 전문 기술 인력 선발 비율 단계적 확대</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+            <p>서울특별시 종로구 세종대로 209 (세종로) 행정안전부</p>
+            <p>Copyright © Ministry of the Interior and Safety. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
